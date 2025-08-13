@@ -1,0 +1,124 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 20px;
+}
+
+h2 {
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+    flex-wrap: wrap; /* ✅ allows stacking on smaller screens */
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    flex: 1;
+    min-width: 280px; /* ✅ ensures it doesn't shrink too small */
+}
+
+label {
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: block;
+    color: #444;
+}
+
+select, input[type="text"], button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+select:focus, input[type="text"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 3px rgba(0,123,255,0.5);
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#clearFieldsBtn {
+    background-color: #dc3545;
+}
+
+#clearFieldsBtn:hover {
+    background-color: #a71d2a;
+}
+
+/* Preview form styling */
+#formPreview div {
+    background: #f9f9f9;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center; /* ✅ aligns checkbox/radio with label */
+    flex-wrap: wrap; /* ✅ allows label to wrap below if too long */
+}
+
+#formPreview input[type="checkbox"],
+#formPreview input[type="radio"] {
+    margin-right: 8px;
+}
+
+#formPreview input[type="text"] {
+    background-color: #e3f2fd;
+    border: 1px solid #90caf9;
+    width: 100%;
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+
+#formPreview label {
+    white-space: normal;
+    word-break: break-word;
+    margin: 0;
+}
+
+/* ✅ Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    .card {
+        padding: 15px;
+    }
+    button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
